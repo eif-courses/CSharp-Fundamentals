@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Grader // Note: actual namespace depends on the project name.
+namespace Attributes // Note: actual namespace depends on the project name.
 {
   [AttributeUsage(AttributeTargets.Method, Inherited = false, AllowMultiple = false)]
   public class Evaluate : Attribute
