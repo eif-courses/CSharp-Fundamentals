@@ -28,15 +28,17 @@
 /// </summary>
 
 public delegate void PurchaseDelegate(double amount); // delegate declaration
+public delegate int MulticastDelegate(); // delegate declaration for multicast usage
+public delegate T AddDelegate<T>(T param1, T param2); // generic delegate example
 
 class Program
 {
   static void Main(string[] args)
   {
-
+    Console.WriteLine("------------------CUSTOM DELEGATE EXAMPLES RESULTS-------------------------");
     // You able to use PurchaseDelegate combaining with any method matches delegate signature
     // signature = same method return type and parameter count
-    
+
     PurchaseDelegate purchaseDelegate = Student.BuyFood;
     purchaseDelegate(32.25);
 
@@ -55,9 +57,73 @@ class Program
 
     PassDelegateByParameter.InvokeDelegate(purchaseDelegate);
 
+    // Multicast Delegate
+    // The delegate can point to multiple methods.
+    // A delegate that points multiple methods is called a multicast delegate.
+    // The "+" or "+=" operator adds a function to the invocation list, and the "-" and "-=" operator removes it.
+
+    MulticastDelegate bathroom = BathroomMulticastExample.Area;
+    MulticastDelegate kitchen = KitchenMulticastExample.Area;
+
+    // Basically it calls delegates: first bathroom, second kitchen and so on
+
+    MulticastDelegate result = bathroom + kitchen;
+    result += kitchen;
+    Console.WriteLine("------------------MULTICAST DELEGATE EXAMPLE RESULT-------------------------");
+    Console.WriteLine("BATHROOM CODE = 711, KITCHEN CODE = 30");
+    Console.WriteLine("----------------------------------------------------------------------------");
+    Console.WriteLine($"CURRENT VALUE: Result of delegates call: {result.Invoke()}"); // returns kitchen area last delegate in list
+
+    // Removing operator in delegates
+    result = result - kitchen; // removes kitchen 
+
+    Console.WriteLine($"AFTER REMOVING KITCHEN: Result of delegates call: {result.Invoke()}");
+
+    result -= kitchen; // removes another kitchen
+    
+    // Shorter version result() same as result.Invoke()
+    Console.WriteLine($"AFTER REMOVING KITCHEN: Result of delegates call: {result()}");
+
+    // A generic delegate can be defined the same way as a delegate but using generic type parameters or return type.
+    // The generic type must be specified when you set a target method.
+    // For example, consider the following generic delegate that is used for int and string parameters.
+    
+    Console.WriteLine("------------------GENERIC DELEGATE EXAMPLE RESULT-------------------------");
+
+    AddDelegate<int> add = DummyClassGenericDelegate.SumOfTwoNumbers;
+    AddDelegate<string> concat = DummyClassGenericDelegate.Concatenate;
+
+    Console.WriteLine($"Result of sum: {add(19, 21)}");
+    Console.WriteLine($"Result of string concat:{concat("Delegates is ", "Easy to learn")}");
+    Console.WriteLine("----------------------------------------------------------------------------");
   }
 }
 
+// GENERIC DELEGATE EXAMPLE CLASSES
+
+class DummyClassGenericDelegate
+{
+  public static int SumOfTwoNumbers(int a, int b)
+  {
+    return a + b;
+  }
+  public static string Concatenate(string str1, string str2)
+  {
+    return str1 + str2;
+  }
+}
+
+// MULTICAST DELEGATE EXAMPLE CLASSES
+class BathroomMulticastExample
+{
+  public static int Area() { return 711; }
+}
+class KitchenMulticastExample
+{
+  public static int Area() { return 30; }
+}
+
+// PASS BY PARAMETER DELEGATE EXAMPLE CLASSES
 class PassDelegateByParameter
 {
   public static void InvokeDelegate(PurchaseDelegate purchaseDelegate) // PurchaseDelegate type parameter
@@ -66,6 +132,7 @@ class PassDelegateByParameter
   }
 }
 
+// CUSTOM USER DEFINED DELEGATE EXAMPLE CLASSES
 class Student
 {
   public static void BuyFood(double amount) {
