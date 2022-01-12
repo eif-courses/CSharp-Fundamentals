@@ -29,7 +29,7 @@
   /// Specifies that another class cannot be derived from this type.
   sealed class Math
   {
-
+    public static double Area(int pi, int r) { return pi * r * r; }
   }
   /// DIVIDE CLASS IN SEPARATE PIECES BUT USE AS NORMAL CLASS
   partial class Algorithm
@@ -50,7 +50,7 @@
       algorithm.SearchDFS();
       algorithm.BubbleSort();
 
-
+      Math.Area(1, 2);
 
     }
   }
