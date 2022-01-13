@@ -12,4 +12,4 @@ When working on large projects, spreading a class over separate files enables mu
 When working with automatically generated source, code can be added to the class without having to recreate the source file. Visual Studio uses this approach when it creates Windows Forms, Web service wrapper code, and so on. You can create code that uses these classes without having to modify the file created by Visual Studio.
 When using source generators to generate additional functionality in a class.
 To split a class definition, use the partial keyword modifier, as shown here:*/
-https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods
+//https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods

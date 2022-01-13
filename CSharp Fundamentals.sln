@@ -13,41 +13,47 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "Events\Events.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classes", "Types\Classes.csproj", "{3F931145-0E9B-4124-9229-B1A0BB38B251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Records", "Records\Records.csproj", "{6BCF08CE-09E6-4F93-AEDC-9B3BEF8F966E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Records", "Records\Records.csproj", "{6BCF08CE-09E6-4F93-AEDC-9B3BEF8F966E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialClasses", "PartialClasses\PartialClasses.csproj", "{B504D160-0C36-442C-A33C-9232BE16BB4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartialClasses", "PartialClasses\PartialClasses.csproj", "{B504D160-0C36-442C-A33C-9232BE16BB4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nullable", "Nullable\Nullable.csproj", "{551F1FCB-DE5B-4CB3-84B0-8FBD596F270A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullable", "Nullable\Nullable.csproj", "{551F1FCB-DE5B-4CB3-84B0-8FBD596F270A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{AB880DE4-D9B5-41FD-9B73-70560D8827BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", "{AB880DE4-D9B5-41FD-9B73-70560D8827BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexers", "Indexers\Indexers.csproj", "{F777F4B5-B34D-491C-8D1B-8411EEB903D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indexers", "Indexers\Indexers.csproj", "{F777F4B5-B34D-491C-8D1B-8411EEB903D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{006B809C-D6F5-4603-9921-2BDFED1EAD3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Properties", "Properties\Properties.csproj", "{006B809C-D6F5-4603-9921-2BDFED1EAD3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WriteSafeEfficientCode", "WriteSafeEfficientCode\WriteSafeEfficientCode.csproj", "{B35A67C9-E631-4389-892A-BDE861CFE268}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WriteSafeEfficientCode", "WriteSafeEfficientCode\WriteSafeEfficientCode.csproj", "{B35A67C9-E631-4389-892A-BDE861CFE268}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Members", "Members\Members.csproj", "{11C9A779-1811-4942-BC4F-96948AC6BD2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Members", "Members\Members.csproj", "{11C9A779-1811-4942-BC4F-96948AC6BD2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{8E9F774D-2856-4904-B9A4-7173A97074EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{8E9F774D-2856-4904-B9A4-7173A97074EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{006EBE38-F2D4-4155-8201-0F8D8A02C038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strings", "Strings\Strings.csproj", "{006EBE38-F2D4-4155-8201-0F8D8A02C038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{20AEB530-C0D0-4E7F-9A1E-F0EB3AC99283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{20AEB530-C0D0-4E7F-9A1E-F0EB3AC99283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystem", "FileSystem\FileSystem.csproj", "{479C0F69-40F8-420A-9D82-00F65C1A138C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystem", "FileSystem\FileSystem.csproj", "{479C0F69-40F8-420A-9D82-00F65C1A138C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interoperability", "Interoperability\Interoperability.csproj", "{10EAF577-BD3C-4ED2-9821-E150FC56840E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interoperability", "Interoperability\Interoperability.csproj", "{10EAF577-BD3C-4ED2-9821-E150FC56840E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registry", "Registry\Registry.csproj", "{7E2BEC34-C2A9-43E0-A1D0-4AA167EEB664}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Registry", "Registry\Registry.csproj", "{7E2BEC34-C2A9-43E0-A1D0-4AA167EEB664}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generic\Generics.csproj", "{D637F55C-125E-420C-8E74-DDA2C029D649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generic\Generics.csproj", "{D637F55C-125E-420C-8E74-DDA2C029D649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs", "Structs\Structs.csproj", "{CCC4272D-DD63-4911-9EB3-8D64577CF292}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structs", "Structs\Structs.csproj", "{CCC4272D-DD63-4911-9EB3-8D64577CF292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousTypes", "AnonymousTypes\AnonymousTypes.csproj", "{3D56C1D9-BE56-4CA9-AF3D-B7FF6B13B036}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnonymousTypes", "AnonymousTypes\AnonymousTypes.csproj", "{3D56C1D9-BE56-4CA9-AF3D-B7FF6B13B036}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Namespaces", "Namespaces\Namespaces.csproj", "{AC232660-7822-463D-8506-D5D8FF64C507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Namespaces", "Namespaces\Namespaces.csproj", "{AC232660-7822-463D-8506-D5D8FF64C507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "Encapsulation\Encapsulation.csproj", "{09A3E466-4AF1-4D44-999C-A8A37D1C5ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constants", "Constants\Constants.csproj", "{C1EA48A9-C2B7-4215-B91A-1927D5A4333A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "References", "References\References.csproj", "{FE93AB77-A78E-4C2B-8346-F79B11C96544}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +153,18 @@ Global
 		{AC232660-7822-463D-8506-D5D8FF64C507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC232660-7822-463D-8506-D5D8FF64C507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC232660-7822-463D-8506-D5D8FF64C507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A3E466-4AF1-4D44-999C-A8A37D1C5ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A3E466-4AF1-4D44-999C-A8A37D1C5ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A3E466-4AF1-4D44-999C-A8A37D1C5ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A3E466-4AF1-4D44-999C-A8A37D1C5ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1EA48A9-C2B7-4215-B91A-1927D5A4333A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1EA48A9-C2B7-4215-B91A-1927D5A4333A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1EA48A9-C2B7-4215-B91A-1927D5A4333A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1EA48A9-C2B7-4215-B91A-1927D5A4333A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE93AB77-A78E-4C2B-8346-F79B11C96544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE93AB77-A78E-4C2B-8346-F79B11C96544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE93AB77-A78E-4C2B-8346-F79B11C96544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE93AB77-A78E-4C2B-8346-F79B11C96544}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
