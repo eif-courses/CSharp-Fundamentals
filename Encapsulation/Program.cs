@@ -25,8 +25,8 @@
 
   public class CustomerWithEncapsulation
   {
-    public string Code { get; set; }
-    public string Name { get; set; }
+    public string? Code { get; set; }
+    public string? Name { get; set; }
     public void Add()
     {
       Validate();
