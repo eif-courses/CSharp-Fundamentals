@@ -28,6 +28,8 @@ D: Dependency Inversion Principle (DIP)
 public class Program {
     static void Main()
     {
+
+     
       // EASY WAY :)
       BlizzardAppService blizzardAppService = new BlizzardAppService();
       blizzardAppService.AddFriend("marius#444");
@@ -37,6 +39,16 @@ public class Program {
       RequestFriendClient requestFriendClient = new RequestFriendClient(); 
       BlizzardAppServiceSRP blizzard = new BlizzardAppServiceSRP(new BlizzardAppServiceSRP.FriendRequestService(requestFriendClient));
       blizzard.AddFriend("Marius#2222");
+
+
+      // Open closed principle
+
+      OpenClosePrinciple.Pencil pencil = new OpenClosePrinciple.Pencil();
+      OpenClosePrinciple.Eraser eraser = new OpenClosePrinciple.Eraser();
+      OpenClosePrinciple.Tool [] toolArray = {pencil, eraser};
+      OpenClosePrinciple.ToolSimulator.Run(toolArray);
+
+
 
     }
   }
