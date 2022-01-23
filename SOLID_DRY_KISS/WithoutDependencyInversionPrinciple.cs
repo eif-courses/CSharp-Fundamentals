@@ -5,17 +5,54 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-/*
- * The Dependency Inversion Principle (DIP) states that high-level modules/classes should not depend on low-level modules/classes.
- * Both should depend upon abstractions. Secondly, abstractions should not depend upon details. 
- * Details should depend upon abstractions.
- * High - level modules/classes implement business rules or logic in a system (application). 
- * Low - level modules / classes deal with more detailed operations; 
-in other words they may deal with writing information to databases or passing messages to the operating system or services.
-*/
+
 namespace SOLID_DRY_KISS
 {
-  internal class WithoutDependencyInversionPrinciple
+
+  public class Player
   {
+    public string Name { get; set; }
+    public decimal Experience { get; set; }
+  }
+  public class Database
+  {
+    public void SaveToDatabase(Player player)
+    {
+      Console.WriteLine($" { player.Name } progress successfully saved to database!");
+    }
+  }
+  public class Logger
+  {
+    public void Log(string message)
+    {
+      Console.WriteLine($"LOG: Activity registered: { message }");
+    }
+  }
+  public class Quest
+  {
+    public string Name { get; set; }
+    public decimal Reward { get; private set; }
+    public Player Owner { get; set; }
+    public DateOnly ObtainedDate { get; private set; }
+
+    public bool IsComplete { get; private set; }
+
+    public void StartQuest(DateOnly date)
+    {
+      ObtainedDate = date;
+      Logger log = new Logger();
+      log.Log($"Quest: { Name } added to your list!");
+    }
+    public void CompleteQuest(DateOnly dateOnly)
+    {
+      IsComplete = true;
+      ObtainedDate = dateOnly;
+      Reward += 1000;
+      Logger log = new Logger();
+      log.Log($"Quest { Name } completed! at {dateOnly}.");
+
+      Database database = new Database();
+      database.SaveToDatabase(Owner);
+    }
   }
 }

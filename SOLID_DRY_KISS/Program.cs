@@ -53,6 +53,39 @@ public class Program {
       user.Read();
       // user can't write
 
+      // WITHOUT Dependency Inversion Principle (DIP)
+      // DEPENDS ON LOW LEVEL MODULES
+
+      Player player = new Player() { Name = "FireMan", Experience = 0 };
+      Quest quest = new Quest()
+      {
+        Name = "The Games We Play",
+        Owner = player
+      };
+      var currentDate = DateOnly.FromDateTime(DateTime.Now);
+      quest.StartQuest(currentDate);
+      quest.CompleteQuest(currentDate);
+
+      // Dependency Inversion Principle (DIP)
+      // IT depending on Abstractions and easier for testing, updating and so on
+      // For example you switching logger System or Database
+      // so you have better time to make small changes instead whole solution
+
+      DIP.IPlayer dipPlayer = FactoryDIP.CreatePlayer();
+      dipPlayer.Name = "DIP FireMan";
+      dipPlayer.Experience = 0;
+
+      DIP.IQuest dipQuest = FactoryDIP.CreateQuest();
+      dipQuest.Name = "DIP The Games We Play";
+      dipQuest.Owner = dipPlayer;
+
+      dipQuest.StartQuest(currentDate);
+      dipQuest.CompleteQuest(currentDate);
+
+
+
+
+
     }
   }
 }
