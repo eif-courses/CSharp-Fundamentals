@@ -28,27 +28,30 @@ D: Dependency Inversion Principle (DIP)
 public class Program {
     static void Main()
     {
-
-     
-      // EASY WAY :)
-      BlizzardAppService blizzardAppService = new BlizzardAppService();
-      blizzardAppService.AddFriend("marius#444");
-
-
+        
       // Single Responsibility Principle (SRP)
+     
       RequestFriendClient requestFriendClient = new RequestFriendClient(); 
       BlizzardAppServiceSRP blizzard = new BlizzardAppServiceSRP(new BlizzardAppServiceSRP.FriendRequestService(requestFriendClient));
       blizzard.AddFriend("Marius#2222");
 
-
-      // Open closed principle
+      // Open closed Principle (OCP)
 
       OpenClosePrinciple.Pencil pencil = new OpenClosePrinciple.Pencil();
       OpenClosePrinciple.Eraser eraser = new OpenClosePrinciple.Eraser();
       OpenClosePrinciple.Tool [] toolArray = {pencil, eraser};
       OpenClosePrinciple.ToolSimulator.Run(toolArray);
 
+      // Interface Segregation Principle (ISP) 
 
+      var admin = new ISP.Admin();
+      var user = new ISP.User();
+      
+      admin.Write();
+      admin.Read();
+      
+      user.Read();
+      // user can't write
 
     }
   }
