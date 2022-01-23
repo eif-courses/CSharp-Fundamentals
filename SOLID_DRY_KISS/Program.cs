@@ -82,9 +82,41 @@ public class Program {
       dipQuest.StartQuest(currentDate);
       dipQuest.CompleteQuest(currentDate);
 
+      // WITHOUT The Liskov Substitution Principle (LSP)
+      // UNCOMMENT LINES AND SEE WHATS WRONG
+      Manager manager = new Manager();
+      manager.Name = "Tom";
+      manager.CalculateSalary(4);
+
+      Employee employee = new CEO();
+      employee.Name = "John";
+      //employee.AssignManager(manager); // !!!!!!BREAKS LSP principle runtime errord!!!!!!
+      employee.CalculateSalary(2);
+      Console.WriteLine($"{ employee.Name } salary is { employee.Salary }/per hour.");
+      // END OF BLOCK
+      // IMPORTANT WORDS
+      // COVARIANCE CHANGING RETURN TYPE
+      // CONTRAVARIANCE CHANGE PARAMETER INPUT TYPE
+      
+      // PRECONDITIONS YOU CAN'T UPDATE METHOD "WITH IF STATEMENT" BECAUSE IT NOT WORK
+      // IN OTHER PLACES WHICH IS INHERETS EMPLOYEE
+      
+      // POSTCONDITIONS
 
 
+      // A lot of flexible way without breaking app
+      Liskov.IManager liskovManager = new Liskov.CEO();
+      liskovManager.Name = "Liskov";
+      liskovManager.CalculateSalary(4);
 
+
+      //Liskov.BaseEmployee ceo = new Liskov.CEO();
+      Liskov.IManaged managed = new Liskov.Employee();
+      managed.Name = "Managed employee";
+      managed.CalculateSalary(2);
+      managed.AssignManager(liskovManager);
+
+      Console.WriteLine($"{ managed.Name } salary is { managed.Salary }/per hour.");
 
     }
   }
