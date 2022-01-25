@@ -39,6 +39,13 @@ namespace SOLID_DRY_KISS
       }
     }
 
+    public interface IEmployee
+    {
+      string Name { get; set; }
+      decimal Salary { get; set; }
+      void CalculateSalary(int experience);
+    }
+
     public interface IManager: IEmployee
     {
       public void GeneratePerfomanceReview();
@@ -48,12 +55,7 @@ namespace SOLID_DRY_KISS
       IEmployee Manager { get; set; }
       void AssignManager(IEmployee manager);
     }
-    public interface IEmployee
-    {
-      string Name { get; set; }
-      decimal Salary { get; set; }
-      void CalculateSalary(int experience);
-    }
+  
 
     public class Employee : BaseEmployee, IManaged
     {

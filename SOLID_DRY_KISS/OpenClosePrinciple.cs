@@ -49,6 +49,16 @@ namespace SOLID_DRY_KISS
         Console.WriteLine("Eraser is Erasing...");
       }
     }
+    public class Magnifier : Tool
+    {
+      public override void Action()
+      {
+        ZoomIn();
+      }
+      public void ZoomIn() { Console.WriteLine("ZOOMING IN"); }
+    }
+
+
     public class ToolSimulator
     {
       public static void Run(Tool[] toolArray)

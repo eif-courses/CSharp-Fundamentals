@@ -22,7 +22,7 @@ namespace SOLID_DRY_KISS
   }
   // Main problem each new tool added we should 
   // append ToolSimulator with extra if statement
-  // So its breaks rule because WE OPEN FOR MODIFICATION
+  // So its breaks rule because WE OPEN FOR Extension
   // ToolSimulator is not close for modification
   public class ToolSimulator
   {

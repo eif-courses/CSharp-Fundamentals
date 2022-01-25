@@ -93,6 +93,8 @@ public class Program {
       //employee.AssignManager(manager); // !!!!!!BREAKS LSP principle runtime errord!!!!!!
       employee.CalculateSalary(2);
       Console.WriteLine($"{ employee.Name } salary is { employee.Salary }/per hour.");
+     
+      
       // END OF BLOCK
       // IMPORTANT WORDS
       // COVARIANCE CHANGING RETURN TYPE
@@ -106,6 +108,9 @@ public class Program {
 
       // A lot of flexible way without breaking app
       Liskov.IManager liskovManager = new Liskov.CEO();
+
+    
+
       liskovManager.Name = "Liskov";
       liskovManager.CalculateSalary(4);
 
