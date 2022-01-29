@@ -1,4 +1,5 @@
-﻿/// <remarks>
+﻿namespace Delegates;
+/// <remarks>
 /// 2022, Marius Gzegozevskis, .NET 6
 /// </remarks>
 /**
@@ -96,6 +97,12 @@ class Program
     Console.WriteLine($"Result of sum: {add(19, 21)}");
     Console.WriteLine($"Result of string concat:{concat("Delegates is ", "Easy to learn")}");
     Console.WriteLine("----------------------------------------------------------------------------");
+
+    Console.WriteLine("------------------DEFAULT DELEGATE FUNC EXAMPLE RESULT-------------------------");
+    // Delegates similar to Java functional interface Combained With Lambda
+    DefaultDelegateUsage.TestDefaultDelegate();
+    // Passing custom functionallity or anonymous functions
+    DefaultDelegateUsage.TestSInlineMethodsVersion();
   }
 }
 
@@ -146,5 +153,4 @@ class Manager
     Console.WriteLine($"You spended: {amount} eur, You are Lucky today get Porsche from Auction House so Cheap!");
   }
 }
-
 
