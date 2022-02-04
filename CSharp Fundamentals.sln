@@ -63,7 +63,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID_DRY_KISS", "SOLID_DRY
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiers", "AccessModifiers\AccessModifiers.csproj", "{5DF039E6-1D6D-49F6-87F7-292E9F8ACCCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesUI", "DelegatesUI\DelegatesUI.csproj", "{620FD406-CFD5-436E-A5EC-FFA33B781B00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesUI", "DelegatesUI\DelegatesUI.csproj", "{620FD406-CFD5-436E-A5EC-FFA33B781B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{28BC3509-6972-46B9-91ED-F0D08BB9405A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +197,10 @@ Global
 		{620FD406-CFD5-436E-A5EC-FFA33B781B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{620FD406-CFD5-436E-A5EC-FFA33B781B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{620FD406-CFD5-436E-A5EC-FFA33B781B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28BC3509-6972-46B9-91ED-F0D08BB9405A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28BC3509-6972-46B9-91ED-F0D08BB9405A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28BC3509-6972-46B9-91ED-F0D08BB9405A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28BC3509-6972-46B9-91ED-F0D08BB9405A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

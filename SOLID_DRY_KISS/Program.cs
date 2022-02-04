@@ -75,6 +75,7 @@ public class Program {
       dipPlayer.Name = "DIP FireMan";
       dipPlayer.Experience = 0;
 
+
       DIP.IQuest dipQuest = FactoryDIP.CreateQuest();
       dipQuest.Name = "DIP The Games We Play";
       dipQuest.Owner = dipPlayer;
@@ -115,7 +116,10 @@ public class Program {
       liskovManager.CalculateSalary(4);
 
 
-      //Liskov.BaseEmployee ceo = new Liskov.CEO();
+      Liskov.BaseEmployee ceo = new Liskov.CEO();
+      Liskov.Employee c = new Liskov.Manager();
+     // ceo = c;
+
       Liskov.IManaged managed = new Liskov.Employee();
       managed.Name = "Managed employee";
       managed.CalculateSalary(2);

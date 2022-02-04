@@ -65,6 +65,17 @@ in other words they may deal with writing information to databases or passing me
       }
     }
 
+    public class MongoDB : IDatabase
+    {
+      public void SaveToDatabase(IPlayer player)
+      {
+        Console.WriteLine($" { player.Name } progress successfully saved to MONGO DATABASE database!");
+      }
+    }
+
+
+
+
     public class Logger : ILogger
     {
       public void Log(string message)
@@ -72,6 +83,16 @@ in other words they may deal with writing information to databases or passing me
         Console.WriteLine($"LOG: Activity registered: { message }");
       }
     }
+
+    public class Logger2 : ILogger
+    {
+      public void Log(string message)
+      {
+        Console.WriteLine($"LOG: Activity registered: { message }");
+      }
+    }
+
+
 
     public class Quest : IQuest
     {

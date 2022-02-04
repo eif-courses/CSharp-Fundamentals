@@ -57,7 +57,14 @@ namespace SOLID_DRY_KISS
       }
       public void ZoomIn() { Console.WriteLine("ZOOMING IN"); }
     }
-
+  
+    public class ColorPicker : Tool
+    {
+      public override void Action()
+      {
+        Console.WriteLine("Picking color");
+      }
+    }
 
     public class ToolSimulator
     {
