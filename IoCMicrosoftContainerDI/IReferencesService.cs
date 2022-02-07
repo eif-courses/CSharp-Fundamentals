@@ -1,6 +1,6 @@
 ﻿namespace IoCMicrosoftContainerDI;
 
-public interface IReferences
+public interface IReferencesService
 {
     void MostImportantLinks();
 }
