@@ -29,6 +29,14 @@ using Serilog;
 
 
 
+// DIFFERENT TYPES OF SERVICE REGISTRATION ON CONTAINER
+// https://thecodeblogger.com/2021/04/25/demo-console-app-for-understanding-dependency-injection-in-net/
+// Singleton - Stays same 
+// Scoped - Changes when scope is changed
+// Transient - CHanges each Invocation
+
+
+
 var builder = new ConfigurationBuilder();
 BuildConfig(builder);
 

@@ -28,14 +28,35 @@
 /// We can do it by creating an object of the delegate using the new keyword and passing a method whose signature matches the delegate signature.
 /// </summary>
 
+
+
 public delegate void PurchaseDelegate(double amount); // delegate declaration
 public delegate int MulticastDelegate(); // delegate declaration for multicast usage
 public delegate T AddDelegate<T>(T param1, T param2); // generic delegate example
 
+
+
+public delegate int Calculator(int a, int b);
 class Program
 {
+
+  static int Print(int a, int b) { return a / b; }
+
+  static void Addition(Calculator c){
+    Console.WriteLine(c(121, 21));
+  }
+
+
   static void Main(string[] args)
   {
+    Calculator calculator = (a, b) => a + b;
+    Calculator calculator2 = (a, b) => Print(a, b);
+    
+    Addition(calculator2);
+
+    ///Console.WriteLine(calculator(22,2));
+
+
     Console.WriteLine("------------------CUSTOM DELEGATE EXAMPLES RESULTS-------------------------");
     // You able to use PurchaseDelegate combaining with any method matches delegate signature
     // signature = same method return type and parameter count
@@ -48,11 +69,13 @@ class Program
     purchaseDelegate = Manager.BuyNewCar;
     purchaseDelegate.Invoke(25000);
 
+
     // Lambda is Fun to use it also combined with Delegates
 
-    purchaseDelegate = amount => Console.WriteLine($"You have used secret method and spended: {amount} eur.");
+    purchaseDelegate = x => Console.WriteLine($"You have used secret method and spended: {x} eur.");
+
     purchaseDelegate(1200);
-    
+
     // Longer version of lambda or multiple parameters
     // purchaseDelegate = (double amount) => Console.WriteLine($"You have used secret method and spended: {amount} eur.");
 
@@ -66,29 +89,35 @@ class Program
     MulticastDelegate bathroom = BathroomMulticastExample.Area;
     MulticastDelegate kitchen = KitchenMulticastExample.Area;
 
+
+ 
+
     // Basically it calls delegates: first bathroom, second kitchen and so on
 
     MulticastDelegate result = bathroom + kitchen;
-    result += kitchen;
+    result += bathroom;
+    
     Console.WriteLine("------------------MULTICAST DELEGATE EXAMPLE RESULT-------------------------");
     Console.WriteLine("BATHROOM CODE = 711, KITCHEN CODE = 30");
     Console.WriteLine("----------------------------------------------------------------------------");
     Console.WriteLine($"CURRENT VALUE: Result of delegates call: {result.Invoke()}"); // returns kitchen area last delegate in list
-
+ 
+   
+   
     // Removing operator in delegates
     result = result - kitchen; // removes kitchen 
 
     Console.WriteLine($"AFTER REMOVING KITCHEN: Result of delegates call: {result.Invoke()}");
 
-    result -= kitchen; // removes another kitchen
-    
+   // result -= kitchen; // removes another kitchen
+
     // Shorter version result() same as result.Invoke()
-    Console.WriteLine($"AFTER REMOVING KITCHEN: Result of delegates call: {result()}");
+   // Console.WriteLine($"AFTER REMOVING KITCHEN: Result of delegates call: {result()}");
 
     // A generic delegate can be defined the same way as a delegate but using generic type parameters or return type.
     // The generic type must be specified when you set a target method.
     // For example, consider the following generic delegate that is used for int and string parameters.
-    
+
     Console.WriteLine("------------------GENERIC DELEGATE EXAMPLE RESULT-------------------------");
 
     AddDelegate<int> add = DummyClassGenericDelegate.SumOfTwoNumbers;

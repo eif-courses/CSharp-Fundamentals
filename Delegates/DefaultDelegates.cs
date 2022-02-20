@@ -17,6 +17,14 @@ namespace Delegates
 
     // FUNC can't return void
     // Last parameter will be return type first is inputs
+    
+    
+ 
+    
+
+    
+    
+    
     public decimal GenerateTotal(
       MentionDiscount mentionDiscount, 
       Func<List<Products>, decimal, decimal> calculateDiscountedTotal,
@@ -71,10 +79,12 @@ namespace Delegates
     }
     public static void TotalPriceCalculation(decimal total)
     {
+      
       Console.WriteLine($"Total price: {total} eur");
     } 
     public static decimal CalculateDiscounted(List<Products> items, decimal total)
     {
+     
       // ITEMS NOT USED
       // JUST FOR LATER USAGE
       if(total > 20)
